@@ -26,6 +26,13 @@ body{
 
 .game_container{
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.side_title{
+  text-align: center;
 }
 
 
