@@ -29,10 +29,29 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .side_title{
   text-align: center;
 }
+
+.player_side_container{
+  width: 50%;
+  background-color: var(--light_purple);
+
+  display: flex;
+  flex: 1;
+  flex-direction: vertical;
+}
+
+.computer_side_container{
+  width: 50%;
+  background-color: var(--dark_purple);
+  display: flex;
+  flex: 1;
+}
+
+
 
 
