@@ -13,6 +13,7 @@ body{
   align-items: center;
 
   margin: 0px;
+  height: 100vh;
 }
 
 .title_container{
@@ -22,10 +23,11 @@ body{
   width: 100%;
 
   text-align: center;
+  border-bottom: 2px solid white;
 }
 
 .game_container{
-  flex: 1;
+  flex: 5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,18 +40,42 @@ body{
 
 .player_side_container{
   width: 50%;
+  height: 100%;
   background-color: var(--light_purple);
 
   display: flex;
-  flex: 1;
-  flex-direction: vertical;
+  flex: 1 1 1;
+  flex-direction: column;
+}
+
+.player_options{
+  display: flex;
+  justify-content: space-evenly;
+
+  list-style-type: none;
+  padding: 0;
+  
+}
+
+li > img{
+  text-align: center;
+}
+li{
+  text-decoration: none;
+  flex: 0 1 auto;
+  display: flex;
+  
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .computer_side_container{
   width: 50%;
+  height: 100%;
   background-color: var(--dark_purple);
   display: flex;
-  flex: 1;
+  flex: 1 1 1;
 }
 
 
