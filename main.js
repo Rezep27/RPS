@@ -1,6 +1,12 @@
 let humanScore = 0;
 let computerScore = 0;
 
+let rock_option = document.querySelector("#rock_option > img");
+let paper_option = document.querySelector("#paper_option > img");
+let scissor_option = document.querySelector("#scissor_option > img");
+
+
+
 function transaleString(myStr){
     switch (myStr) {
         case "ROCK":
@@ -64,14 +70,15 @@ function getComputerChoice(){
     }
 }
 
-// We get the human choice from a prompt and translate it to its number equivalent
-function getHumanChoice(){
-    return translate(prompt("Insert your choice for this turn: ").toUpperCase());
+// We get the human choice from the image he selected and translate it to its number equivalent
+function getHumanChoice(option, computerChoice){
+  playRound(option, computerChoice);
 }
 
+
 function playRound(humanChoice , computerChoice){
-    let hChoice = humanChoice();
     let cChoice = computerChoice();
+    let hChoice = humanChoice;
 
     let result = 4;
 
@@ -122,4 +129,7 @@ function playGame(){
     }
 }
 
-playGame();
+rock_option.addEventListener("click", () => getHumanChoice(3, getComputerChoice));
+paper_option.addEventListener("click", () => getHumanChoice(2, getComputerChoice));
+scissor_option.addEventListener("click", () => getHumanChoice(1, getComputerChoice));
+
